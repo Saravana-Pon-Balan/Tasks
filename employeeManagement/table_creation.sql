@@ -1,7 +1,0 @@
---create table employee (id serial primary key, name varchar(30) not null, dob date, mobile_number varchar(14), employee_role varchar(15), address varchar(150), branch_id integer, foreign key(branch_id) references branch(id))
---create table branch (id serial primary key, name varchar(30) not null, location varchar(30) not null);
---create table passport (id serial primary key, place_of_birth varchar(30), passport_number varchar(9) not null unique, date_of_expiry date, employee_id integer not null unique, foreign key(employee_id) references employee(id));
---CREATE TYPE task_status AS ENUM ('inprogress', 'notstarted', 'completed', 'cancelled');
---create table task(id serial primary key, given_date date, duration int, status task_status, employee_id int, foreign key(employee_id) references employee(id) )
---create table course(id serial primary key, name varchar(50) not null, description text);
---create table employee_course_mapper(id serial primary key, employee_id int, course_id int, foreign key(employee_id) references employee(id), foreign key(course_id) references course(id));
